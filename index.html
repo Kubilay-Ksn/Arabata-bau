@@ -16,9 +16,6 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--black); overflow-x: hidden; cursor: none; }
 
-/* CURSOR */
-.cursor { position: fixed; top: 0; left: 0; width: 12px; height: 12px; background: var(--red); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.1s; }
-.cursor.big { transform: scale(2.5) !important; }
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; transition: background 0.4s; }
@@ -244,7 +241,6 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -453,16 +449,7 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
 
 <script>
 // CURSOR
-const cur = document.getElementById('cursor');
-let mx=0,my=0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cur.style.transform = `translate(${mx-6}px,${my-6}px)`;
-});
-document.querySelectorAll('a,button,.srv-card,.step,.a-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('big');});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('big');});
-});
+
 
 // NAV
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
