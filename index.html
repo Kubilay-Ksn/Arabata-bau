@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arabata Bau UG – Abbruch & Trockenbau Duisburg</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -14,16 +14,14 @@
   --bg: #edecea; --bg2: #e5e3e0; --card: #f5f4f2;
 }
 html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--black); overflow-x: hidden; cursor: auto; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--black); overflow-x: hidden; cursor: auto; }
 
 /* CURSOR */
-.cursor { position: fixed; top: 0; left: 0; width: 12px; height: 12px; background: var(--red); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.1s; }
-.cursor.big { transform: scale(2.5) !important; }
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; transition: background 0.4s; }
 nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-.nav-logo { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--black); }
+.nav-logo { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--black); }
 .nav-logo span { color: var(--red); }
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a { font-size: 14px; color: rgba(0,0,0,0.5); text-decoration: none; transition: color .2s; position: relative; }
@@ -41,20 +39,20 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 .hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(192,57,43,.5)}50%{box-shadow:0 0 0 8px rgba(192,57,43,0)} }
 .hero-eyebrow span { font-size: 13px; font-weight: 500; color: var(--red); letter-spacing: .14em; text-transform: uppercase; }
-.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(32px, 9vw, 130px); font-weight: 800; line-height: .92; letter-spacing: -4px; color: var(--black); overflow-wrap: break-word; word-break: break-word; }
+.hero h1 { font-family: 'Inter', sans-serif; font-size: clamp(32px, 9vw, 130px); font-weight: 700; line-height: .92; letter-spacing: -1px; color: var(--black); overflow-wrap: break-word; word-break: break-word; }
 .hero h1 .line { display: block; clip-path: inset(0 0 100% 0); animation: lineReveal .9s cubic-bezier(.16,1,.3,1) forwards; }
 .hero h1 .line:nth-child(1) { animation-delay: .35s; }
 .hero h1 .line:nth-child(2) { animation-delay: .5s; color: var(--red); }
 .hero h1 .line:nth-child(3) { animation-delay: .65s; color: rgba(0,0,0,.15); }
 @keyframes lineReveal { to { clip-path: inset(0 0 0% 0); } }
-.hero-sub { font-size: clamp(15px,1.8vw,19px); font-weight: 300; color: rgba(0,0,0,.45); line-height: 1.65; max-width: 440px; margin-top: 28px; opacity: 0; animation: slideR .8s .8s forwards; }
+.hero-sub { font-size: clamp(15px,1.8vw,19px); font-weight: 400; color: rgba(0,0,0,.45); line-height: 1.65; max-width: 440px; margin-top: 28px; opacity: 0; animation: slideR .8s .8s forwards; }
 .hero-actions { display: flex; gap: 14px; margin-top: 44px; flex-wrap: wrap; opacity: 0; animation: slideR .8s 1s forwards; }
-.btn-red { background: var(--red); color: #fff; font-family: 'DM Sans'; font-size: 15px; font-weight: 500; padding: 14px 32px; border-radius: 6px; text-decoration: none; border: none; cursor: auto; transition: all .25s; display: inline-flex; align-items: center; gap: 8px; position: relative; overflow: hidden; }
+.btn-red { background: var(--red); color: #fff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; padding: 14px 32px; border-radius: 6px; text-decoration: none; border: none; cursor: auto; transition: all .25s; display: inline-flex; align-items: center; gap: 8px; position: relative; overflow: hidden; }
 .btn-red::before { content: ''; position: absolute; inset: 0; background: var(--red2); transform: translateX(-100%); transition: transform .35s; }
 .btn-red:hover::before { transform: translateX(0); }
 .btn-red span, .btn-red svg { position: relative; }
 .btn-red:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(192,57,43,.35); }
-.btn-ghost { background: transparent; color: rgba(0,0,0,.6); font-family: 'DM Sans'; font-size: 15px; font-weight: 400; padding: 14px 32px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(0,0,0,.18); cursor: auto; transition: all .25s; }
+.btn-ghost { background: transparent; color: rgba(0,0,0,.6); font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; padding: 14px 32px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(0,0,0,.18); cursor: auto; transition: all .25s; }
 .btn-ghost:hover { border-color: rgba(0,0,0,.4); color: var(--black); background: rgba(0,0,0,.04); }
 .scroll-hint { position: absolute; bottom: 40px; left: 8vw; display: flex; align-items: center; gap: 12px; opacity: 0; animation: fadeIn 1s 1.4s forwards; }
 .scroll-line { width: 40px; height: 1px; background: rgba(0,0,0,.15); position: relative; overflow: hidden; }
@@ -70,7 +68,7 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 .marquee-track { display: flex; gap: 48px; width: max-content; animation: marquee 18s linear infinite; }
 .marquee-track:hover { animation-play-state: paused; }
 @keyframes marquee { from{transform:translateX(0)}to{transform:translateX(-50%)} }
-.m-item { font-family: 'Syne'; font-size: 12px; font-weight: 700; color: rgba(0,0,0,.25); letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; display: flex; align-items: center; gap: 48px; }
+.m-item { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; color: rgba(0,0,0,.25); letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; display: flex; align-items: center; gap: 48px; }
 .m-item::after { content: '✦'; color: var(--red); font-size: 9px; }
 
 /* STATS */
@@ -79,7 +77,7 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 .stat-box.on { opacity: 1; transform: translateY(0); }
 .stat-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .7s ease; }
 .stat-box.on::before { transform: scaleX(1); }
-.stat-num { font-family: 'Syne'; font-size: 60px; font-weight: 800; letter-spacing: -3px; line-height: 1; color: var(--black); }
+.stat-num { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--black); }
 .stat-num .sfx { color: var(--red); }
 .stat-lbl { font-size: 13px; color: var(--gray); margin-top: 8px; letter-spacing: .02em; }
 
@@ -96,22 +94,22 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 .sec { padding: 130px 8vw; background: var(--bg3); }
 .s-tag { font-size: 11px; font-weight: 500; color: var(--red); letter-spacing: .2em; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
 .s-tag::before { content: ''; width: 20px; height: 1px; background: var(--red); }
-.s-title { font-family: 'Syne'; font-size: clamp(36px,4.5vw,64px); font-weight: 800; letter-spacing: -2px; line-height: 1.0; color: var(--black); }
-.s-body { font-size: 17px; font-weight: 300; color: rgba(0,0,0,.45); line-height: 1.7; max-width: 520px; }
+.s-title { font-family: 'Inter', sans-serif; font-size: clamp(30px,4vw,46px); font-weight: 700; letter-spacing: -1px; line-height: 1.1; color: var(--black); }
+.s-body { font-size: 17px; font-weight: 400; color: rgba(0,0,0,.45); line-height: 1.7; max-width: 520px; }
 
 /* SERVICES */
 .srv-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: rgba(0,0,0,0.1); margin-top: 72px; }
-.srv-card { background: var(--card); padding: 60px 52px; position: relative; overflow: hidden; cursor: auto; transition: background .3s; }
+.srv-card { background: var(--card); padding: 60px 52px; position: relative; overflow: hidden; cursor: pointer; transition: background .3s; display: block; text-decoration: none; }
 .srv-card:hover { background: #ebe9e6; }
-.srv-ghost { font-family: 'Syne'; font-size: 80px; font-weight: 800; color: transparent; -webkit-text-stroke: 1px rgba(0,0,0,.06); position: absolute; top: 20px; right: 32px; transition: -webkit-text-stroke-color .3s; pointer-events: none; }
+.srv-card::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(192,57,43,0.10) 0%, transparent 70%); opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+.srv-card:hover::before { opacity: 1; }
+.srv-ghost { font-family: 'Inter', sans-serif; font-size: 80px; font-weight: 700; color: transparent; -webkit-text-stroke: 1px rgba(0,0,0,.06); position: absolute; top: 20px; right: 32px; transition: -webkit-text-stroke-color .3s; pointer-events: none; }
 .srv-card:hover .srv-ghost { -webkit-text-stroke-color: rgba(192,57,43,.25); }
-.srv-glow { position: absolute; inset: 0; background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(192,57,43,.06) 0%, transparent 60%); opacity: 0; transition: opacity .3s; pointer-events: none; }
-.srv-card:hover .srv-glow { opacity: 1; }
-.srv-icon { width: 52px; height: 52px; margin-bottom: 32px; background: rgba(192,57,43,.1); border: 1px solid rgba(192,57,43,.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all .3s; }
+.srv-card:hover .srv-icon { width: 52px; height: 52px; margin-bottom: 32px; background: rgba(192,57,43,.1); border: 1px solid rgba(192,57,43,.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all .3s; }
 .srv-card:hover .srv-icon { background: rgba(192,57,43,.2); border-color: var(--red); }
 .srv-icon svg { width: 24px; height: 24px; stroke: var(--red); fill: none; stroke-width: 1.8; }
-.srv-card h3 { font-family: 'Syne'; font-size: 26px; font-weight: 700; letter-spacing: -.8px; color: var(--black); margin-bottom: 14px; }
-.srv-card p { font-size: 15px; font-weight: 300; color: rgba(0,0,0,.45); line-height: 1.7; }
+.srv-card h3 { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: -.8px; color: var(--black); margin-bottom: 14px; }
+.srv-card p { font-size: 15px; font-weight: 400; color: rgba(0,0,0,.45); line-height: 1.7; }
 .srv-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
 .srv-tag { font-size: 11px; padding: 5px 12px; border-radius: 4px; background: rgba(0,0,0,.05); color: rgba(0,0,0,.4); border: 1px solid rgba(0,0,0,.08); letter-spacing: .05em; }
 .srv-arr { position: absolute; bottom: 40px; right: 44px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(0,0,0,.12); display: flex; align-items: center; justify-content: center; transition: all .3s; color: rgba(0,0,0,.3); }
@@ -119,11 +117,7 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 
 /* ABOUT */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; padding: 130px 8vw; border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); }
-.vis { position: relative; height: 520px; }
-.vis-main { position: absolute; bottom: 0; left: 0; right: 0; height: 320px; background: linear-gradient(135deg, #d8d6d3 0%, #e8d0cc 100%); border: 1px solid rgba(0,0,0,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 80px; overflow: hidden; }
-.vis-float { position: absolute; top: 0; right: 0; width: 180px; height: 180px; background: linear-gradient(135deg, rgba(192,57,43,.18), rgba(192,57,43,.08)); border: 1px solid rgba(192,57,43,.25); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
-.vis-float .big { font-family: 'Syne'; font-size: 44px; font-weight: 800; color: var(--red); }
-.vis-float .sm { font-size: 12px; color: rgba(0,0,0,.45); text-align: center; line-height: 1.4; }
+.vis { position: relative; height: 440px; }
 .a-list { margin-top: 40px; }
 .a-item { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-size: 15px; color: rgba(0,0,0,.5); transition: color .25s, padding-left .25s; cursor: default; }
 .a-item:hover { color: var(--black); padding-left: 8px; }
@@ -137,10 +131,10 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 .step:hover { background: #ebe9e6; }
 .step-line { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .5s ease; }
 .step:hover .step-line { transform: scaleX(1); }
-.step-n { font-family: 'Syne'; font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: .12em; margin-bottom: 20px; }
+.step-n { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: .12em; margin-bottom: 20px; }
 .step-em { font-size: 36px; margin-bottom: 20px; }
-.step h3 { font-family: 'Syne'; font-size: 20px; font-weight: 700; letter-spacing: -.5px; color: var(--black); margin-bottom: 12px; }
-.step p { font-size: 14px; font-weight: 300; color: rgba(0,0,0,.45); line-height: 1.65; }
+.step h3 { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -.5px; color: var(--black); margin-bottom: 12px; }
+.step p { font-size: 14px; font-weight: 400; color: rgba(0,0,0,.45); line-height: 1.65; }
 
 /* CONTACT */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; padding: 130px 8vw; border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg); }
@@ -152,16 +146,16 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 .c-val { font-size: 17px; font-weight: 500; color: var(--black); text-decoration: none; display: block; transition: color .2s; }
 .c-val:hover { color: var(--red); }
 .form { display: flex; flex-direction: column; gap: 14px; }
-.form-title { font-family: 'Syne'; font-size: 28px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; color: var(--black); }
+.form-title { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; color: var(--black); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .f-wrap { display: flex; flex-direction: column; gap: 6px; }
 .f-wrap label { font-size: 11px; color: var(--gray); letter-spacing: .1em; text-transform: uppercase; }
-.f-wrap input, .f-wrap textarea, .f-wrap select { font-family: 'DM Sans'; font-size: 15px; font-weight: 300; padding: 14px 16px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); outline: none; background: #fff; color: var(--black); box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: border-color .25s, background .25s; appearance: none; }
+.f-wrap input, .f-wrap textarea, .f-wrap select { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 400; padding: 14px 16px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); outline: none; background: #fff; color: var(--black); box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: border-color .25s, background .25s; appearance: none; }
 .f-wrap input:focus, .f-wrap textarea:focus, .f-wrap select:focus { border-color: var(--red); background: rgba(192,57,43,.06); }
 .f-wrap input::placeholder, .f-wrap textarea::placeholder { color: rgba(0,0,0,.25); }
 .f-wrap textarea { resize: none; height: 120px; }
 .f-wrap select option { background: #fff; color: var(--black); }
-.f-submit { background: var(--red); color: #fff; font-family: 'DM Sans'; font-size: 15px; font-weight: 500; padding: 15px 32px; border-radius: 8px; border: none; cursor: auto; transition: all .25s; display: flex; align-items: center; gap: 10px; width: fit-content; position: relative; overflow: hidden; }
+.f-submit { background: var(--red); color: #fff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; padding: 15px 32px; border-radius: 8px; border: none; cursor: auto; transition: all .25s; display: flex; align-items: center; gap: 10px; width: fit-content; position: relative; overflow: hidden; }
 .f-submit::before { content: ''; position: absolute; inset: 0; background: var(--red2); transform: translateX(-100%); transition: transform .35s; }
 .f-submit:hover::before { transform: translateX(0); }
 .f-submit span, .f-submit svg { position: relative; }
@@ -171,7 +165,7 @@ nav.scrolled { background: rgba(237,236,234,0.92); backdrop-filter: blur(20px); 
 
 /* FOOTER */
 footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding: 48px 8vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-.f-logo { font-family: 'Syne'; font-size: 20px; font-weight: 800; color: var(--black); }
+.f-logo { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--black); }
 .f-logo span { color: var(--red); }
 .f-copy { font-size: 13px; color: var(--gray); }
 .f-links { display: flex; gap: 24px; }
@@ -212,7 +206,7 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
 }
 .p-item:hover .p-overlay { opacity: 1; }
 .p-label {
-  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600;
+  font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
   color: #fff; letter-spacing: -0.3px;
 }
 
@@ -240,7 +234,7 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
 .lightbox-close:hover { color: #fff; }
 .lb-caption {
   position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-  font-family: 'Syne', sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);
+  font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);
   letter-spacing: 0.05em; white-space: nowrap;
 }
 .lb-nav {
@@ -271,6 +265,57 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
   .p-item:nth-child(1) { grid-column: span 1; }
 }
 
+/* DEMO ANIMATION */
+.demo-scene { position: absolute; inset: 0; height: 100%; border: 1px solid rgba(0,0,0,0.08); border-radius: 18px; overflow: hidden; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4), 0 30px 60px -20px rgba(0,0,0,0.22); }
+.demo-scene svg { width: 100%; height: 100%; display: block; }
+
+.brick { transform-box: fill-box; transform-origin: center; transition: transform 1s cubic-bezier(.36,.05,.22,1), opacity .8s ease; }
+.demolished .brick { transform: translate(var(--dx), var(--fall)) rotate(var(--rot)); opacity: 0; }
+.rebuilt .brick { opacity: 0; transition: opacity .3s ease; }
+#brickwall > rect { transition: opacity .5s ease; }
+.demolished #brickwall > rect, .rebuilt #brickwall > rect { opacity: 0; }
+
+.track, .stud, .board { opacity: 0; transform: translateY(34px); transform-box: fill-box; transition: opacity .65s ease, transform .75s cubic-bezier(.34,.01,.28,1); }
+.rebuilt .track, .rebuilt .stud, .rebuilt .board { opacity: 1; transform: translateY(0); }
+.demolished .track, .demolished .stud, .demolished .board { opacity: 0; transform: translateY(50px) rotate(1.5deg); transition: opacity .5s ease, transform .5s ease; }
+
+.rubble { opacity: 0; transform: translateY(10px); transition: opacity .6s ease .3s, transform .6s ease .3s; }
+.demolished .rubble { opacity: 1; transform: translateY(0); }
+
+.dust { opacity: 0; }
+.demolished .dust .d0 { animation: dustRise 1.6s ease .05s forwards; }
+.demolished .dust .d1 { animation: dustRise 1.8s ease .18s forwards; }
+.demolished .dust .d2 { animation: dustRise 1.5s ease .30s forwards; }
+@keyframes dustRise { 0%{opacity:0; transform:translateY(20px) scale(.5)} 30%{opacity:.9} 100%{opacity:0; transform:translateY(-50px) scale(1.6)} }
+
+.demo-badge { position: absolute; top: 18px; left: 18px; background: var(--red); color: #fff; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 8px 14px; border-radius: 10px; box-shadow: 0 8px 22px rgba(192,57,43,0.32); pointer-events: none; }
+.demo-hint { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(20,20,20,0.8); color: #fff; font-size: 12px; font-weight: 500; padding: 9px 18px; border-radius: 980px; pointer-events: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; backdrop-filter: blur(6px); }
+.hint-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: pulse 1.6s infinite; }
+
+/* LEGAL MODALS */
+.legal-overlay { position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.55); backdrop-filter: blur(6px); opacity: 0; pointer-events: none; transition: opacity .3s ease; display: flex; align-items: center; justify-content: center; padding: 5vh 5vw; }
+.legal-overlay.open { opacity: 1; pointer-events: all; }
+.legal-box { background: #fdfcfa; border-radius: 16px; max-width: 760px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; transform: translateY(20px) scale(.98); transition: transform .3s ease; box-shadow: 0 40px 80px -20px rgba(0,0,0,.4); }
+.legal-overlay.open .legal-box { transform: translateY(0) scale(1); }
+.legal-head { position: sticky; top: 0; background: #fdfcfa; padding: 28px 40px 18px; border-bottom: 1px solid rgba(0,0,0,.08); display: flex; align-items: center; justify-content: space-between; z-index: 2; }
+.legal-head h2 { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -.5px; color: var(--black); }
+.legal-close { background: rgba(0,0,0,.05); border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 17px; color: var(--black); cursor: pointer; transition: background .2s; line-height: 1; }
+.legal-close:hover { background: rgba(0,0,0,.11); }
+.legal-body { padding: 24px 40px 40px; font-size: 14.5px; line-height: 1.75; color: rgba(0,0,0,.72); }
+.legal-body h3 { font-size: 15px; font-weight: 600; color: var(--black); margin: 28px 0 8px; letter-spacing: -.1px; }
+.legal-body h3:first-child { margin-top: 0; }
+.legal-body p { margin-bottom: 12px; }
+.legal-body strong { color: var(--black); font-weight: 600; }
+.legal-body a { color: var(--red); text-decoration: none; }
+.legal-body a:hover { text-decoration: underline; }
+.legal-note { background: rgba(192,57,43,.06); border-left: 3px solid var(--red); padding: 12px 16px; border-radius: 6px; font-size: 13.5px; margin-bottom: 20px; }
+@media(max-width:600px){
+  .legal-overlay { padding: 0; }
+  .legal-box { border-radius: 0; max-height: 100vh; height: 100vh; }
+  .legal-head { padding: 20px 22px 14px; }
+  .legal-body { padding: 20px 22px 40px; }
+}
+
 /* KEYFRAMES */
 @keyframes slideR { from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)} }
 @keyframes fadeIn { from{opacity:0}to{opacity:1} }
@@ -281,7 +326,6 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
   .nav-links{display:none}
   .hero-badge{display:none}
   body{cursor:auto}
-  .cursor{display:none}
 
   .hero{padding:100px 6vw 70px;min-height:100svh;overflow:hidden}
   .hero h1{font-size:clamp(28px,10vw,48px);letter-spacing:-0.5px}
@@ -337,7 +381,6 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -376,29 +419,10 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
     <div class="scroll-line"></div>
     <span>Scrollen</span>
   </div>
-  <div class="hero-badge">
-    <svg viewBox="0 0 120 120">
-      <defs><path id="cp" d="M60,60 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
-      <text fill="rgba(0,0,0,0.25)" font-size="11" font-family="DM Sans" letter-spacing="3" font-weight="500">
-        <textPath href="#cp">ABBRUCH · TROCKENBAU · DUISBURG ·</textPath>
-      </text>
-    </svg>
-    <div class="hero-badge-inner">🏗️</div>
-  </div>
+  
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <div class="m-item">Abbrucharbeiten</div><div class="m-item">Trockenbau</div>
-    <div class="m-item">Duisburg</div><div class="m-item">Qualität</div>
-    <div class="m-item">Zuverlässigkeit</div><div class="m-item">Erfahrung</div>
-    <div class="m-item">Präzision</div><div class="m-item">Termingerecht</div>
-    <div class="m-item">Abbrucharbeiten</div><div class="m-item">Trockenbau</div>
-    <div class="m-item">Duisburg</div><div class="m-item">Qualität</div>
-    <div class="m-item">Zuverlässigkeit</div><div class="m-item">Erfahrung</div>
-    <div class="m-item">Präzision</div><div class="m-item">Termingerecht</div>
-  </div>
+
 </div>
 
 <!-- STATS -->
@@ -426,52 +450,120 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
   <div class="s-tag rev">Leistungen</div>
   <h2 class="s-title rev d1" style="margin-bottom:0">Was wir für<br>Sie leisten</h2>
   <div class="srv-grid">
-    <div class="srv-card rev d1">
-      <div class="srv-ghost">01</div>
-      <div class="srv-glow"></div>
+    <a href="#kontakt" class="srv-card rev d1">
       <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
       <h3>Abbrucharbeiten</h3>
       <p>Kontrollierter Rückbau von Gebäuden, Wänden und Strukturen. Sauber, sicher und termingerecht – inklusive fachgerechter Entsorgung.</p>
       <div class="srv-tags"><span class="srv-tag">Innenabbruch</span><span class="srv-tag">Abriss</span><span class="srv-tag">Entsorgung</span><span class="srv-tag">Kernbohrung</span></div>
       <div class="srv-arr"><svg viewBox="0 0 24 24" width="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-    <div class="srv-card rev d2">
-      <div class="srv-ghost">02</div>
-      <div class="srv-glow"></div>
+    </a>
+    <a href="#kontakt" class="srv-card rev d2">
       <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
       <h3>Trockenbau</h3>
       <p>Wände, Decken, Ständerwerk – professionell und maßgenau. Für Privat- und Gewerbekunden, vom Einzelzimmer bis zum Großprojekt.</p>
       <div class="srv-tags"><span class="srv-tag">Trennwände</span><span class="srv-tag">Deckenausbau</span><span class="srv-tag">Ständerwerk</span><span class="srv-tag">Schallschutz</span></div>
       <div class="srv-arr"><svg viewBox="0 0 24 24" width="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-    <div class="srv-card rev d3">
-      <div class="srv-ghost">03</div>
-      <div class="srv-glow"></div>
+    </a>
+    <a href="#kontakt" class="srv-card rev d3">
       <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg></div>
       <h3>Privatkunden</h3>
       <p>Badumbau, Kellersanierung, Wohnraumgestaltung – wir helfen dabei, Ihre Räume nach Ihren Wünschen zu gestalten.</p>
       <div class="srv-tags"><span class="srv-tag">Badumbau</span><span class="srv-tag">Keller</span><span class="srv-tag">Wohnräume</span></div>
       <div class="srv-arr"><svg viewBox="0 0 24 24" width="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-    <div class="srv-card rev d4">
-      <div class="srv-ghost">04</div>
-      <div class="srv-glow"></div>
+    </a>
+    <a href="#kontakt" class="srv-card rev d4">
       <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
       <h3>Gewerbekunden</h3>
       <p>Büros, Lagerhallen, Einzelhandelsflächen – wir realisieren gewerbliche Projekte präzise und termingerecht.</p>
       <div class="srv-tags"><span class="srv-tag">Büroausbau</span><span class="srv-tag">Hallen</span><span class="srv-tag">Einzelhandel</span></div>
       <div class="srv-arr"><svg viewBox="0 0 24 24" width="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
+    </a>
   </div>
 </section>
 
 <!-- ABOUT -->
 <div class="about-grid" id="ueber-uns">
   <div class="vis revL">
-    <div class="vis-main">🏗️</div>
-    <div class="vis-float rev d3">
-      <div class="big">10</div>
-      <div class="sm">Jahre<br>Erfahrung</div>
+    <div class="demo-scene" id="demoScene" onclick="cycleDemo()">
+      <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#efe9e1"/><stop offset="1" stop-color="#e4ddd2"/>
+          </linearGradient>
+          <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#cdb08a" stop-opacity="1"/><stop offset="0" stop-color="#cdb08a"/><stop offset="1" stop-color="#bb9a72"/>
+          </linearGradient>
+          <linearGradient id="mortar" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8d8278"/><stop offset="1" stop-color="#766c63"/>
+          </linearGradient>
+          <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#b9bec6"/><stop offset="0.5" stop-color="#e6e9ed"/><stop offset="1" stop-color="#aeb3bb"/>
+          </linearGradient>
+          <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f6f4f0"/><stop offset="1" stop-color="#e8e5df"/>
+          </linearGradient>
+          <linearGradient id="wallLight" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#000000" stop-opacity="0.08"/>
+          </linearGradient>
+          <radialGradient id="dustG" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#efe9df" stop-opacity="0.85"/><stop offset="1" stop-color="#efe9df" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+          <filter id="wallShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.14"/></filter>
+        </defs>
+
+        <rect x="0" y="0" width="480" height="380" fill="url(#room)"/>
+        <rect x="0" y="296" width="480" height="84" fill="url(#floor)"/>
+        <g stroke="#a98a64" stroke-opacity="0.35" stroke-width="1">
+          <line x1="0" y1="296" x2="480" y2="296"/>
+          <line x1="70" y1="296" x2="70" y2="380"/>
+          <line x1="190" y1="296" x2="190" y2="380"/>
+          <line x1="300" y1="296" x2="300" y2="380"/>
+          <line x1="410" y1="296" x2="410" y2="380"/>
+        </g>
+        <rect x="0" y="294" width="480" height="4" fill="#000" opacity="0.06"/>
+
+        <g id="newwall" filter="url(#wallShadow)">
+          <rect class="track" x="96" y="70" width="288" height="8" rx="2" fill="url(#steel)" style="transition-delay:.02s"/>
+          <rect class="track" x="96" y="288" width="288" height="8" rx="2" fill="url(#steel)" style="transition-delay:.02s"/>
+          <rect class="stud" x="104" y="74" width="9" height="218" rx="1" fill="url(#steel)" style="transition-delay:.06s"/>
+          <rect class="stud" x="160" y="74" width="9" height="218" rx="1" fill="url(#steel)" style="transition-delay:.10s"/>
+          <rect class="stud" x="216" y="74" width="9" height="218" rx="1" fill="url(#steel)" style="transition-delay:.14s"/>
+          <rect class="stud" x="272" y="74" width="9" height="218" rx="1" fill="url(#steel)" style="transition-delay:.18s"/>
+          <rect class="stud" x="328" y="74" width="9" height="218" rx="1" fill="url(#steel)" style="transition-delay:.22s"/>
+          <rect class="stud" x="367" y="74" width="9" height="218" rx="1" fill="url(#steel)" style="transition-delay:.26s"/>
+          <rect class="board" x="98" y="72" width="142" height="222" rx="3" fill="url(#board)" style="transition-delay:.32s"/>
+          <rect class="board" x="242" y="72" width="142" height="222" rx="3" fill="url(#board)" style="transition-delay:.42s"/>
+          <g class="board finish" style="transition-delay:.52s">
+            <line x1="240" y1="74" x2="240" y2="292" stroke="#d6d2cb" stroke-width="2"/>
+            <g fill="#c4bfb6">
+              <circle cx="118" cy="96" r="1.7"/><circle cx="118" cy="180" r="1.7"/><circle cx="118" cy="264" r="1.7"/>
+              <circle cx="178" cy="96" r="1.7"/><circle cx="178" cy="180" r="1.7"/><circle cx="178" cy="264" r="1.7"/>
+              <circle cx="226" cy="96" r="1.7"/><circle cx="226" cy="180" r="1.7"/><circle cx="226" cy="264" r="1.7"/>
+              <circle cx="282" cy="96" r="1.7"/><circle cx="282" cy="180" r="1.7"/><circle cx="282" cy="264" r="1.7"/>
+              <circle cx="338" cy="96" r="1.7"/><circle cx="338" cy="180" r="1.7"/><circle cx="338" cy="264" r="1.7"/>
+              <circle cx="372" cy="96" r="1.7"/><circle cx="372" cy="180" r="1.7"/><circle cx="372" cy="264" r="1.7"/>
+            </g>
+            <rect x="98" y="72" width="286" height="222" rx="3" fill="url(#wallLight)"/>
+          </g>
+        </g>
+
+        <g id="rubble" class="rubble"></g>
+
+        <g id="brickwall">
+          <rect x="96" y="70" width="288" height="226" fill="url(#mortar)" rx="2"/>
+          <g id="bricks"></g>
+          <rect x="96" y="70" width="288" height="226" fill="url(#wallLight)" rx="2" pointer-events="none"/>
+        </g>
+
+        <g id="dust" class="dust">
+          <ellipse cx="150" cy="210" rx="46" ry="40" fill="url(#dustG)" filter="url(#soft)"/>
+          <ellipse cx="240" cy="180" rx="58" ry="50" fill="url(#dustG)" filter="url(#soft)"/>
+          <ellipse cx="320" cy="215" rx="48" ry="42" fill="url(#dustG)" filter="url(#soft)"/>
+        </g>
+      </svg>
+      <div class="demo-badge">10 Jahre Erfahrung</div>
+      <div class="demo-hint" id="demoHint"><span class="hint-dot"></span>Klicken zum Abreißen</div>
     </div>
   </div>
   <div class="revR">
@@ -584,21 +676,12 @@ footer { border-top: 1px solid rgba(0,0,0,0.1); background: var(--bg2); padding:
 <footer>
   <div class="f-logo">Arabata <span>Bau</span> UG</div>
   <div class="f-copy">© 2025 Arabata Bau UG · Alle Rechte vorbehalten</div>
-  <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+  <div class="f-links"><a href="#" onclick="openLegal('impressum');return false;">Impressum</a><a href="#" onclick="openLegal('datenschutz');return false;">Datenschutz</a></div>
 </footer>
 
 <script>
 // CURSOR
-const cur = document.getElementById('cursor');
-let mx=0,my=0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cur.style.transform = `translate(${mx-6}px,${my-6}px)`;
-});
-document.querySelectorAll('a,button,.srv-card,.step,.a-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('big');});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('big');});
-});
+
 
 
 // LIGHTBOX
@@ -626,6 +709,122 @@ document.addEventListener('keydown', e => {
   if(e.key==='Escape') closeLB();
   if(e.key==='ArrowLeft') shiftLB(-1);
   if(e.key==='ArrowRight') shiftLB(1);
+});
+
+// DEMO ANIMATION
+(function(){
+  const svgNS='http://www.w3.org/2000/svg';
+  const g=document.getElementById('bricks');
+  if(!g) return;
+  // brick tones (subtle variation, warm clay)
+  const tones=['#c06548','#b65c41','#bd6147','#a9543c','#c46b4e','#b15838'];
+  const bw=46, bh=22, gapX=4, rowH=26, x0=100, y0=74, wallW=280, rows=8;
+  for(let r=0;r<rows;r++){
+    const y=y0+r*rowH;
+    const offset=(r%2)*((bw+gapX)/2);
+    let x=x0-offset;
+    while(x<x0+wallW){
+      const bx=Math.max(x,x0);
+      const w=Math.min(bw,x0+wallW-bx);
+      if(w>10){
+        const grp=document.createElementNS(svgNS,'g');
+        grp.setAttribute('class','brick');
+        const tone=tones[Math.floor(Math.random()*tones.length)];
+        const rect=document.createElementNS(svgNS,'rect');
+        rect.setAttribute('x',bx); rect.setAttribute('y',y);
+        rect.setAttribute('width',w); rect.setAttribute('height',bh);
+        rect.setAttribute('rx',2.5); rect.setAttribute('fill',tone);
+        const hl=document.createElementNS(svgNS,'rect');
+        hl.setAttribute('x',bx); hl.setAttribute('y',y);
+        hl.setAttribute('width',w); hl.setAttribute('height',bh*0.42);
+        hl.setAttribute('rx',2.5); hl.setAttribute('fill','#ffffff'); hl.setAttribute('opacity','0.10');
+        const sh=document.createElementNS(svgNS,'rect');
+        sh.setAttribute('x',bx); sh.setAttribute('y',y+bh*0.62);
+        sh.setAttribute('width',w); sh.setAttribute('height',bh*0.38);
+        sh.setAttribute('rx',2.5); sh.setAttribute('fill','#000000'); sh.setAttribute('opacity','0.08');
+        grp.appendChild(rect); grp.appendChild(hl); grp.appendChild(sh);
+        const dx=((bx+w/2)-(x0+wallW/2))*0.25;
+        const fall=(380-y)+Math.random()*40;
+        const rot=(Math.random()*120-60);
+        grp.style.setProperty('--fall',fall.toFixed(0)+'px');
+        grp.style.setProperty('--dx',dx.toFixed(0)+'px');
+        grp.style.setProperty('--rot',rot.toFixed(0)+'deg');
+        // bottom rows fall first for realism
+        const delay=(r*0.015 + Math.random()*0.25);
+        grp.style.transitionDelay=delay.toFixed(2)+'s';
+        g.appendChild(grp);
+      }
+      x+=bw+gapX;
+    }
+  }
+  // build a layered rubble pile
+  const rub=document.getElementById('rubble');
+  const tones2=['#a9543c','#b65c41','#965038','#bd6147','#8e4a34'];
+  // soft ground shadow
+  const sh=document.createElementNS(svgNS,'ellipse');
+  sh.setAttribute('cx','240'); sh.setAttribute('cy','300'); sh.setAttribute('rx','165'); sh.setAttribute('ry','20');
+  sh.setAttribute('fill','#000'); sh.setAttribute('opacity','0.12'); rub.appendChild(sh);
+  let rx=92;
+  for(let i=0;i<18;i++){
+    const w=14+Math.random()*22, h=10+Math.random()*12;
+    const ry=276+Math.random()*16;
+    const chunk=document.createElementNS(svgNS,'rect');
+    chunk.setAttribute('x',rx); chunk.setAttribute('y',ry);
+    chunk.setAttribute('width',w); chunk.setAttribute('height',h);
+    chunk.setAttribute('rx','2');
+    chunk.setAttribute('fill',tones2[i%tones2.length]);
+    chunk.setAttribute('transform','rotate('+(Math.random()*40-20).toFixed(0)+' '+(rx+w/2)+' '+(ry+h/2)+')');
+    rub.appendChild(chunk);
+    const edge=document.createElementNS(svgNS,'rect');
+    edge.setAttribute('x',rx); edge.setAttribute('y',ry+h*0.6);
+    edge.setAttribute('width',w); edge.setAttribute('height',h*0.4);
+    edge.setAttribute('rx','2'); edge.setAttribute('fill','#000'); edge.setAttribute('opacity','0.12');
+    edge.setAttribute('transform','rotate('+(Math.random()*40-20).toFixed(0)+' '+(rx+w/2)+' '+(ry+h/2)+')');
+    rub.appendChild(edge);
+    rx+=15+Math.random()*4;
+  }
+})();
+// tag dust ellipses for staggered animation
+(function(){
+  const ds=document.querySelectorAll('#dust ellipse');
+  ds.forEach((e,i)=>e.classList.add('d'+i));
+})();
+let demoState='intact';
+function cycleDemo(){
+  const scene=document.getElementById('demoScene');
+  const hint=document.getElementById('demoHint');
+  if(demoState==='intact'||demoState==='rebuilt'){
+    scene.classList.remove('rebuilt');
+    void scene.offsetWidth;
+    scene.classList.add('demolished');
+    demoState='demolished';
+    hint.innerHTML='<span class="hint-dot"></span>Klicken zum Aufbauen';
+  } else {
+    scene.classList.remove('demolished');
+    scene.classList.add('rebuilt');
+    demoState='rebuilt';
+    hint.innerHTML='<span class="hint-dot"></span>Klicken zum Abreißen';
+  }
+}
+
+// LEGAL MODALS
+function openLegal(id){
+  document.getElementById('legal-'+id).classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLegal(id){
+  document.getElementById('legal-'+id).classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeLegalOutside(e,id){
+  if(e.target===document.getElementById('legal-'+id)) closeLegal(id);
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.querySelectorAll('.legal-overlay.open').forEach(o=>{
+      o.classList.remove('open'); document.body.style.overflow='';
+    });
+  }
 });
 
 // NAV
@@ -658,21 +857,6 @@ const co = new IntersectionObserver(entries=>{
 },{threshold:.5});
 document.querySelectorAll('.stat-box').forEach(el=>co.observe(el));
 
-// SERVICE CARD GLOW
-document.querySelectorAll('.srv-card').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    const x=((e.clientX-r.left)/r.width*100).toFixed(1);
-    const y=((e.clientY-r.top)/r.height*100).toFixed(1);
-    card.style.setProperty('--mx',x+'%');
-    card.style.setProperty('--my',y+'%');
-    // subtle tilt
-    const tx=(e.clientX-r.left)/r.width-.5;
-    const ty=(e.clientY-r.top)/r.height-.5;
-    card.style.transform=`perspective(800px) rotateY(${tx*5}deg) rotateX(${-ty*5}deg)`;
-  });
-  card.addEventListener('mouseleave',()=>card.style.transform='');
-});
 
 // FORM
 function sendForm(e){
@@ -694,5 +878,117 @@ function sendForm(e){
   },1400);
 }
 </script>
+
+<!-- IMPRESSUM -->
+<div class="legal-overlay" id="legal-impressum" onclick="closeLegalOutside(event,'impressum')">
+  <div class="legal-box">
+    <div class="legal-head">
+      <h2>Impressum</h2>
+      <button class="legal-close" onclick="closeLegal('impressum')">&#10005;</button>
+    </div>
+    <div class="legal-body">
+      <div class="legal-note">Bitte vor Veroeffentlichung pruefen: Geschaeftsfuehrer, Handelsregisternummer und USt-IdNr. ergaenzen.</div>
+
+      <h3>Angaben gem&auml;&szlig; &sect; 5 TMG</h3>
+      <p>
+        Arabata Bau UG (haftungsbeschr&auml;nkt)<br>
+        Weselerstra&szlig;e 200<br>
+        47169 Duisburg<br>
+        Deutschland
+      </p>
+
+      <h3>Vertreten durch</h3>
+      <p>Gesch&auml;ftsf&uuml;hrer: [Name des Gesch&auml;ftsf&uuml;hrers eintragen]</p>
+
+      <h3>Kontakt</h3>
+      <p>
+        Telefon: <a href="tel:015736086707">0157 &ndash; 360 86 707</a><br>
+        E-Mail: <a href="mailto:arabatabau@gmail.com">arabatabau@gmail.com</a>
+      </p>
+
+      <h3>Registereintrag</h3>
+      <p>
+        Eintragung im Handelsregister<br>
+        Registergericht: Amtsgericht Duisburg<br>
+        Registernummer: [HRB-Nummer eintragen]
+      </p>
+
+      <h3>Umsatzsteuer-ID</h3>
+      <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz: [USt-IdNr. eintragen]</p>
+
+      <h3>Verbraucherstreitbeilegung</h3>
+      <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+      <h3>Haftung f&uuml;r Inhalte</h3>
+      <p>Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs. 1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.</p>
+      <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+      <h3>Haftung f&uuml;r Links</h3>
+      <p>Unser Angebot enth&auml;lt gegebenenfalls Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+      <h3>Urheberrecht</h3>
+      <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+    </div>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ -->
+<div class="legal-overlay" id="legal-datenschutz" onclick="closeLegalOutside(event,'datenschutz')">
+  <div class="legal-box">
+    <div class="legal-head">
+      <h2>Datenschutzerkl&auml;rung</h2>
+      <button class="legal-close" onclick="closeLegal('datenschutz')">&#10005;</button>
+    </div>
+    <div class="legal-body">
+      <div class="legal-note">Diese Erkl&auml;rung beschreibt den aktuellen Stand der Website. Bei sp&auml;teren &Auml;nderungen (z.&nbsp;B. echtes Kontaktformular, Google Maps, Analyse-Tools) muss sie angepasst werden.</div>
+
+      <h3>1. Verantwortlicher</h3>
+      <p>
+        Verantwortlich f&uuml;r die Datenverarbeitung auf dieser Website ist:<br>
+        Arabata Bau UG (haftungsbeschr&auml;nkt)<br>
+        Weselerstra&szlig;e 200, 47169 Duisburg<br>
+        Telefon: <a href="tel:015736086707">0157 &ndash; 360 86 707</a><br>
+        E-Mail: <a href="mailto:arabatabau@gmail.com">arabatabau@gmail.com</a>
+      </p>
+
+      <h3>2. Allgemeines zur Datenverarbeitung</h3>
+      <p>Wir verarbeiten personenbezogene Daten unserer Nutzer grunds&auml;tzlich nur, soweit dies zur Bereitstellung einer funktionsf&auml;higen Website sowie unserer Leistungen erforderlich ist. Die Verarbeitung erfolgt regelm&auml;&szlig;ig nur nach Einwilligung des Nutzers oder wenn eine gesetzliche Grundlage die Verarbeitung gestattet.</p>
+
+      <h3>3. Hosting</h3>
+      <p>Diese Website wird bei einem externen Dienstleister gehostet. Beim Aufruf der Website erfasst der Hosting-Anbieter automatisch Informationen, die Ihr Browser &uuml;bermittelt (Server-Logfiles). Dazu geh&ouml;ren in der Regel:</p>
+      <p>
+        IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, verwendeter Browser und Betriebssystem, Referrer-URL.
+      </p>
+      <p>Diese Daten werden zur Gew&auml;hrleistung eines st&ouml;rungsfreien Betriebs und zur Sicherheit der Website verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer technisch fehlerfreien Darstellung).</p>
+
+      <h3>4. Kontaktaufnahme</h3>
+      <p>Wenn Sie uns per Telefon oder E-Mail kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage und f&uuml;r den Fall von Anschlussfragen bei uns gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist, ansonsten Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p>Wir geben diese Daten nicht ohne Ihre Einwilligung weiter. Sie werden gel&ouml;scht, sobald sie f&uuml;r den Zweck ihrer Erhebung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+      <h3>5. Kontaktformular</h3>
+      <p>Das Formular auf dieser Website dient derzeit ausschlie&szlig;lich der Darstellung und versendet keine Daten an einen Server. Eingaben werden nicht gespeichert und nicht &uuml;bertragen. Sobald ein aktiver Versand eingerichtet wird, wird diese Erkl&auml;rung entsprechend erg&auml;nzt.</p>
+
+      <h3>6. Cookies</h3>
+      <p>Diese Website setzt keine Cookies zu Analyse- oder Marketingzwecken ein. Es werden keine Nutzungsprofile erstellt.</p>
+
+      <h3>7. Externe Schriftarten</h3>
+      <p>Diese Website nutzt Schriftarten des Anbieters Google Fonts. Beim Aufruf der Seite l&auml;dt Ihr Browser die ben&ouml;tigten Schriften von einem Google-Server. Dabei wird Ihre IP-Adresse an Google &uuml;bermittelt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen Darstellung). Weitere Informationen finden Sie unter <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+      <h3>8. Ihre Rechte</h3>
+      <p>Sie haben jederzeit das Recht auf:</p>
+      <p>
+        Auskunft &uuml;ber die zu Ihrer Person gespeicherten Daten (Art. 15 DSGVO), Berichtigung unrichtiger Daten (Art. 16 DSGVO), L&ouml;schung (Art. 17 DSGVO), Einschr&auml;nkung der Verarbeitung (Art. 18 DSGVO), Daten&uuml;bertragbarkeit (Art. 20 DSGVO) sowie Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).
+      </p>
+      <p>Eine erteilte Einwilligung k&ouml;nnen Sie jederzeit mit Wirkung f&uuml;r die Zukunft widerrufen.</p>
+
+      <h3>9. Beschwerderecht</h3>
+      <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbeh&ouml;rde &uuml;ber die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Zust&auml;ndig ist die Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
+
+      <h3>10. SSL-Verschl&uuml;sselung</h3>
+      <p>Diese Seite nutzt aus Sicherheitsgr&uuml;nden eine SSL- bzw. TLS-Verschl&uuml;sselung. Eine verschl&uuml;sselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt.</p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
